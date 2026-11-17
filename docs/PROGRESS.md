@@ -28,6 +28,11 @@ Backend card correctly showed "Offline" with a retry.
 | `feature:home` | Welcome screen + backend health check, 4 tests |
 | `feature:devtools` | Debug-only Test hub: Database, Design system and Core checks; `DevToolsScreen`, `DatabaseScreen`, `ComponentsScreen`, `ChecksScreen` |
 
+`AppNavHost` now supplies predictive pop transitions that reuse the platform's ordinary pop
+transitions (`NavTransitions.kt`). `NavTransitionsTest` checks their desktop configurations and
+has failed with deliberately substituted fade-in and scale-out transitions; Android gesture
+verification remains in TODO.
+
 ## Verification on 2026-10-22
 
 Passed Android compilation, Android host/unit tests, `jvmTest`, desktop compilation and

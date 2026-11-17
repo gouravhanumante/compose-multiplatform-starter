@@ -48,6 +48,8 @@ fun AppNavHost(
         exitTransition = appExitTransition,
         popEnterTransition = appPopEnterTransition,
         popExitTransition = appPopExitTransition,
+        predictivePopEnterTransition = appPredictivePopEnterTransition,
+        predictivePopExitTransition = appPredictivePopExitTransition,
     ) {
         composable<HomeRoute> { HomeScreen() }
         composable<SettingsRoute> { SettingsScreen() }

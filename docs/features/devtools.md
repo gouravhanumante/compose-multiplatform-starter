@@ -6,6 +6,8 @@ The debug-only Test destination in `AppShell` opens `DevToolsScreen`, which grou
 Design system and Core checks. `AppNavHost` does not register these routes in release mode.
 The host/build switches are described in [architecture](../architecture.md#navigation-and-appearance).
 This feature is a template diagnostic surface, not an authentication or access-control mechanism.
+Back from a nested Test screen uses the platform pop transitions for both its in-app Back action
+and predictive system Back (`AppNavHost`, `NavTransitions.kt`).
 
 ## Database
 

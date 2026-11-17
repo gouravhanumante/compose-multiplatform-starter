@@ -19,3 +19,11 @@ expect val appExitTransition: AnimatedContentTransitionScope<NavBackStackEntry>.
 expect val appPopEnterTransition: AnimatedContentTransitionScope<NavBackStackEntry>.() -> EnterTransition
 
 expect val appPopExitTransition: AnimatedContentTransitionScope<NavBackStackEntry>.() -> ExitTransition
+
+val appPredictivePopEnterTransition: AnimatedContentTransitionScope<NavBackStackEntry>.(Int) -> EnterTransition = {
+    appPopEnterTransition()
+}
+
+val appPredictivePopExitTransition: AnimatedContentTransitionScope<NavBackStackEntry>.(Int) -> ExitTransition = {
+    appPopExitTransition()
+}

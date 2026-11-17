@@ -130,6 +130,10 @@ routes are registered only for `AppBuildInfo.isDebug`. Android uses `BuildConfig
 iOS uses `Platform.isDebugBinary`, desktop checks the jpackage launcher property, and web
 recognizes localhost/LAN hosts. These are developer-UI switches, not security boundaries.
 
+`AppNavHost` uses `appPredictivePopEnterTransition` and `appPredictivePopExitTransition` from
+`NavTransitions.kt` to reuse each platform's normal pop transitions for predictive system Back;
+the platform-specific transitions and navigation routes are unchanged.
+
 Settings changes the whole-app palette through `ThemeSettings`, persisted by
 `StoredThemeSettings` in `KeyValueStore`. `AppViewModel.palette` feeds `AppTheme`.
 `WidthClass` centralizes 600/840 dp thresholds. `AppScreen.maxContentWidth` defaults to

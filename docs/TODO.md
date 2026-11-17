@@ -29,6 +29,11 @@ does not yet include every exported design-system component or a force-update si
 The notes/settings ViewModels and theme persistence need focused unit tests; remaining copied
 DAO/formatting/single-instance tests have not all been mutation-proven.
 
+## Predictive Back device check
+`AppNavHost` supplies the ordinary platform pop transitions for predictive Back, but the
+gesture has not been checked on an Android device or emulator. Verify committed and cancelled
+gestures from both edges on a nested Test screen and compare with its in-app Back action.
+
 ## Web storage reporting
 The page's `databaseStorage()` checks isolation and the browser storage API, while the worker
 checks whether SQLite actually registered `OpfsDb`. A browser advertising storage but failing VFS
